@@ -1,0 +1,57 @@
+<div style="text-align: center; margin-bottom: 20px;">
+    <button onclick="openGoogleMaps();" class="btn btn-primary">
+      Visit Us
+    </button>
+  </div>
+
+  <script>
+    function openGoogleMaps() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+
+    function showPosition(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+
+      const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=SHOP+NO.44,+Shree+Kalyan+Dental+Care+Hospital,+RDA+Complex,+Raipur,+Chhattisgarh+492001`;
+
+      window.open(googleMapsUrl, '_blank');
+    }
+
+    function showError(error) {
+      let errorMessage = "";
+
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          errorMessage = "User denied the request for Geolocation.";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          errorMessage = "Location information is unavailable.";
+          break;
+        case error.TIMEOUT:
+          errorMessage = "The request to get user location timed out.";
+          break;
+        case error.UNKNOWN_ERROR:
+          errorMessage = "An unknown error occurred.";
+          break;
+      }
+
+      alert(errorMessage);
+    }
+  </script>
+
+  <div id="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.1630007846347!2d81.65553037357421!3d21.22538398099945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd1ccb5aa133%3A0xe67136b0370e4114!2sShree%20Kalyan%20Dental%20Care%20Raipur!5e0!3m2!1sen!2sin!4v1735490953479!5m2!1sen!2sin" 
+      width="600" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>

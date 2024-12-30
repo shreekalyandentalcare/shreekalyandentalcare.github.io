@@ -1,0 +1,79 @@
+<div class="site-mobile-menu">
+  <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>
+<div class="site-navbar-wrap">
+  <div class="site-navbar-top">
+    <div class="container py-2">
+      <div class="row align-items-center">
+        <div class="col-6">
+          <a href="https://www.facebook.com/profile.php?id=100077932892889&mibextid=2JQ9oc" class="p-2 pl-0"
+            target="_blank">
+            <span class="icon-facebook"></span>
+          </a>
+          <a href="https://www.linkedin.com/in/shailja-singh-6685a5235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            class="p-2 pl-0" target="_blank">
+            <span class="icon-linkedin"></span>
+          </a>
+          <a href="https://instagram.com/shree.kalyan.dental.care?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="
+            class="p-2 pl-0" target="_blank">
+            <span class="icon-instagram"></span>
+          </a>
+        </div>
+        <div class="col-6">
+          <div class="d-flex ml-auto">
+            <a href="tel:+917067278733" class="d-flex align-items-center ml-auto mr-4">
+              <span class="icon-phone mr-2"></span>
+              <span class="d-none d-md-inline-block">+917067278733</span>
+            </a>
+            <a href="#" onclick="copyEmail()" class="d-flex align-items-center">
+              <span class="icon-envelope mr-2"></span>
+              <span id="email" class="d-none d-md-inline-block">shreekalyandentalcare@gmail.com</span>
+            </a>
+            <script>
+              function copyEmail() {
+                var emailText = document.getElementById("email").innerText;
+                navigator.clipboard.writeText(emailText).then(function () {
+                  alert("Email address copied to clipboard: " + emailText);
+                }).catch(function (err) {
+                  console.error('Unable to copy email address', err);
+                });
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="site-navbar">
+    <div class="container py-1">
+      <div class="row align-items-center">
+        <div class="col-2">
+          <h2 class="mb-0 site-logo">
+            <a href="/">Shree Kalyan Dental Care</a>
+          </h2>
+        </div>
+        <div class="col-10">
+          <nav class="site-navigation text-right" role="navigation">
+            <div class="container">
+              <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3">
+                <a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
+              </div>
+
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-us">About Us</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
