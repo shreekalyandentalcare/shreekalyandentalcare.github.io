@@ -1,279 +1,192 @@
 <div id="appointment-form" class="site-section site-block-appointment">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2">
-          <div class="pl-lg-5 ml-lg-5">
-            <h2 class="site-heading text-black">Online <strong>Appointment</strong> Request Form</h2>
-            <p class="lead text-black">Our dentist appointment form is a convenient and efficient way to schedule your
-              visit.
-              Please provide your details, preferred date, and any specific requests,
-              and our team will ensure a seamless and personalized experience for your dental care.</p>
-            <!-- <p class="text-black-opacity-5">Temporibus adipisci modi nisi, in deserunt. Nam, veritatis pariatur fugit explicabo? Nemo eius, eaque saepe facilis quidem nisi. Officiis doloremque dolorum optio.</p> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2">
+        <div class="pl-lg-5 ml-lg-5">
+          <h2 class="site-heading text-black">Online <strong>Appointment</strong> Request Form</h2>
+          <p class="lead text-black">Our dentist appointment form is a convenient and efficient way to schedule your
+            visit.
+            Please provide your details, preferred date, and any specific requests,
+            and our team will ensure a seamless and personalized experience for your dental care.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 order-2 order-lg-1" id="response-message">
+        <form id="appointmentForm2" method="post" class="p-5 bg-white"
+          action="https://script.google.com/macros/s/AKfycbwSuaAMIvubZ9HOAQoaURHeBMhN-V_kc3smyd7gZLbdOqVajDqvHXKw-XIYDJ_bfm1f/exec">
+          <div class="row form-group">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label class="font-weight-bold" for="fname">First Name*</label>
+              <input type="text" id="fname" name="first_name" class="form-control" placeholder="First Name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="font-weight-bold" for="lname">Last Name*</label>
+              <input type="text" id="lname" name="last_name" class="form-control" placeholder="Last Name" required>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-6 order-2 order-lg-1">
-          <form method="post" action="#" class="p-5 bg-white">
-            <!-- <div class="row form-group">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <label class="font-weight-bold" for="fname">First Name</label>
-                <input type="text" id="fname" class="form-control" placeholder="First Name">
-              </div>
-              <div class="col-md-6">
-                <label class="font-weight-bold" for="lname">Last Name</label>
-                <input type="text" id="lname" class="form-control" placeholder="Last Name">
-              </div>
+
+          <div class="row form-group">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label class="font-weight-bold" for="gender">Gender*</label>
+              <input type="text" id="gender" name="gender" class="form-control" placeholder="Gender" required>
             </div>
-
-            <div class="row form-group">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <label class="font-weight-bold" for="date">Date</label> 
-                <input type="text" id="date" class="form-control datepicker px-2" placeholder="Date of visit">
-              </div>
-              <div class="col-md-6">
-                <label class="font-weight-bold" for="email">Email</label> 
-                <input type="email" id="email" class="form-control" placeholder="Email">
-              </div>
+            <div class="col-md-6">
+              <label class="font-weight-bold" for="age">Age*</label>
+              <input type="text" id="age" name="age" class="form-control" placeholder="Age" required>
             </div>
+          </div>
 
-            <div class="row form-group">
-              <div class="col-md-12">
-                <label class="font-weight-bold" for="treatment">Treatment Needed</label> 
-                <select name="treatment" id="treatment" class="form-control">                                                       
-                    <option value="">Apicectomy</option>
-                    <option value="">Bone grafting</option>
-                    <option value="">Ceramic venner/laminates</option>
-                    <option value="">Cast partial denture</option>
-                    <option value="">Consultation</option>
-                    <option value="">Dental filling</option>
-                    <option value="">Dental implants</option>
-                    <option value="">Dental implants crown</option>
-                    <option value="">Direct sinus lift surgery</option>
-                    <option value="">E-max crown</option>
-                    <option value="">Gum depigmentation</option>
-                    <option value="">Gum recontouring/gum esthetic surgery</option>
-                    <option value="">IOPA X-Ray</option>
-                    <option value="">Inlay/onlay composite</option>
-                    <option value="">Inlay/onlay metallic</option>
-                    <option value="">Indirect sinus lift surgery</option>
-                    <option value="">Metal Ceramic Crown</option>
-                    <option value="">Metal Crown</option>
-                    <option value="">Operculectomy</option>
-                    <option value="">Orthodontic ceramic braces</option>
-                    <option value="">Orthodontic metallic braces</option>
-                    <option value="">Orthodontic self-ligating ceramic braces</option>
-                    <option value="">Orthodontic treatment (aligners)</option>
-                    <option value="">Orthodontic treatment (self-ligating metallic braces)</option>
-                    <option value="">Pediatric Root canal Treatment with metal cap</option>
-                    <option value="">Pediatric Root canal Treatment with zirconia cap</option>
-                    <option value="">Pediatric dental filling</option>
-                    <option value="">Pediatric extraction</option>
-                    <option value="">Pediatric fluoride application (each arch)</option>
-                    <option value="">Pediatric scaling & polishing</option>
-                    <option value="">Pediatric space maintainer</option>
-                    <option value="">Periodontal flap surgery</option>
-                    <option value="">Pit & fissure sealant</option>
-                    <option value="">Post & Core</option>
-                    <option value="">Post Root canal treatment Filling (Composite)</option>
-                    <option value="">Premium dental implant</option>
-                    <option value="">Removable acrylic partial denture</option>
-                    <option value="">RE-Root canal treatment</option>
-                    <option value="">Root canal Treatment</option>
-                    <option value="">Scaling & polishing</option>
-                    <option value="">Simple extraction/tooth removal</option>
-                    <option value="">Smile designing</option>
-                    <option value="">Specialized complete denture</option>
-                    <option value="">Std.complete denture</option>
-                    <option value="">Surgical extraction/wisdom tooth removal</option>
-                    <option value="">Teeth Whitening</option>                  
-                </select>
-              </div>
+          <div class="row form-group">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label class="font-weight-bold" for="date">Date*</label>
+              <input type="text" id="date" name="date" class="form-control datepicker px-2" placeholder="Date of visit"
+                required>
             </div>
-
-            <div class="row form-group">
-              <div class="col-md-12">
-                <label class="font-weight-bold" for="note">Notes</label> 
-                <textarea name="note" id="note" cols="30" rows="5" class="form-control" placeholder="Write your notes or questions here..."></textarea>
-              </div>
+            <div class="col-md-6">
+              <label class="font-weight-bold" for="time">Time Slot*</label>
+              <select id="time" name="time" class="form-control" required>
+                <option value="" disabled selected>Select a time slot</option>
+                <option value="10:30 AM">10:30 AM</option>
+                <option value="11:15 AM">11:15 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="12:45 PM">12:45 PM</option>
+                <option value="01:30 PM">01:30 PM</option>
+                <option value="02:15 PM">02:15 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="03:45 PM">03:45 PM</option>
+                <option value="04:30 PM">04:30 PM</option>
+                <option value="05:15 PM">05:15 PM</option>
+                <option value="06:00 PM">06:00 PM</option>
+              </select>
             </div>
+          </div>
 
-            <div class="row form-group">
-              <div class="col-md-12">
-                <input type="submit" value="Send" class="btn btn-primary">
-              </div>
-            </div> -->
-
-            <div class="row form-group">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <label class="font-weight-bold" for="fname">First Name*</label>
-                <input type="text" id="fname" class="form-control" placeholder="First Name">
-              </div>
-              <div class="col-md-6">
-                <label class="font-weight-bold" for="lname">Last Name*</label>
-                <input type="text" id="lname" class="form-control" placeholder="Last Name">
-              </div>
+          <div class="row form-group">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label class="font-weight-bold" for="contact">Contact Number*</label>
+              <input type="text" id="contact" name="contact" class="form-control" placeholder="Contact Number" required>
+              <div class="invalid-feedback">Please enter a valid phone number with at least 10 digits.</div>
             </div>
-
-            <div class="row form-group">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <label class="font-weight-bold" for="gender">Gender*</label>
-                <input type="text" id="gender" class="form-control" placeholder="Gender">
-              </div>
-              <div class="col-md-6">
-                <label class="font-weight-bold" for="age">Age*</label>
-                <input type="text" id="age" class="form-control" placeholder="Age">
-              </div>
+            <div class="col-md-6">
+              <label class="font-weight-bold" for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+              <div class="invalid-feedback">Please enter a valid email address (e.g., name@example.com).</div>
             </div>
+          </div>
 
-            <div class="row form-group">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <label class="font-weight-bold" for="date">Date*</label>
-                <input type="text" id="date" class="form-control datepicker px-2" placeholder="Date of visit">
-              </div>
-              <div class="col-md-6">
-                <label class="font-weight-bold" for="time">Time Slot*</label>
-                <select id="time" name="time" class="form-control" required>
-                  <option value="" disabled selected>Select a time slot</option>
-                  <option value="10:30 AM">10:30 AM</option>
-                  <option value="11:15 AM">11:15 AM</option>
-                  <option value="12:00 PM">12:00 PM</option>
-                  <option value="12:45 PM">12:45 PM</option>
-                  <option value="01:30 PM">01:30 PM</option>
-                  <option value="02:15 PM">02:15 PM</option>
-                  <option value="03:00 PM">03:00 PM</option>
-                  <option value="03:45 PM">03:45 PM</option>
-                  <option value="04:30 PM">04:30 PM</option>
-                  <option value="05:15 PM">05:15 PM</option>
-                  <option value="06:00 PM">06:00 PM</option>
-                </select>
-              </div>
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="font-weight-bold" for="treatment">Treatment Needed</label>
+              <select name="treatment" id="treatment" class="form-control">
+                <option value="" disabled selected>Select a treatment</option>
+                <option value="Apicectomy">Apicectomy</option>
+                <option value="Bone grafting">Bone grafting</option>
+                <option value="Ceramic venner/laminates">Ceramic venner/laminates</option>
+                <option value="Cast partial denture">Cast partial denture</option>
+                <option value="Consultation">Consultation</option>
+                <option value="Dental filling">Dental filling</option>
+                <option value="Dental implants">Dental implants</option>
+                <option value="Dental implants crown">Dental implants crown</option>
+                <option value="Direct sinus lift surgery">Direct sinus lift surgery</option>
+                <option value="E-max crown">E-max crown</option>
+                <option value="Gum depigmentation">Gum depigmentation</option>
+                <option value="Gum recontouring/gum esthetic surgery">Gum recontouring/gum esthetic surgery</option>
+                <option value="IOPA X-Ray">IOPA X-Ray</option>
+                <option value="Inlay/onlay composite">Inlay/onlay composite</option>
+                <option value="Inlay/onlay metallic">Inlay/onlay metallic</option>
+                <option value="Indirect sinus lift surgery">Indirect sinus lift surgery</option>
+                <option value="Metal Ceramic Crown">Metal Ceramic Crown</option>
+                <option value="Metal Crown">Metal Crown</option>
+                <option value="Operculectomy">Operculectomy</option>
+                <option value="Orthodontic ceramic braces">Orthodontic ceramic braces</option>
+                <option value="Orthodontic metallic braces">Orthodontic metallic braces</option>
+                <option value="Orthodontic self-ligating ceramic braces">Orthodontic self-ligating ceramic braces
+                </option>
+                <option value="Orthodontic treatment (aligners)">Orthodontic treatment (aligners)</option>
+                <option value="Orthodontic treatment (self-ligating metallic braces)">Orthodontic treatment
+                  (self-ligating metallic braces)</option>
+                <option value="Pediatric Root canal Treatment with metal cap">Pediatric Root canal Treatment with metal
+                  cap</option>
+                <option value="Pediatric Root canal Treatment with zirconia cap">Pediatric Root canal Treatment with
+                  zirconia cap</option>
+                <option value="Pediatric dental filling">Pediatric dental filling</option>
+                <option value="Pediatric extraction">Pediatric extraction</option>
+                <option value="Pediatric fluoride application (each arch)">Pediatric fluoride application (each arch)
+                </option>
+                <option value="Pediatric scaling & polishing">Pediatric scaling & polishing</option>
+                <option value="Pediatric space maintainer">Pediatric space maintainer</option>
+                <option value="Periodontal flap surgery">Periodontal flap surgery</option>
+                <option value="Pit & fissure sealant">Pit & fissure sealant</option>
+                <option value="Post & Core">Post & Core</option>
+                <option value="Post Root canal treatment Filling (Composite)">Post Root canal treatment Filling
+                  (Composite)</option>
+                <option value="Premium dental implant">Premium dental implant</option>
+                <option value="Removable acrylic partial denture">Removable acrylic partial denture</option>
+                <option value="RE-Root canal treatment">RE-Root canal treatment</option>
+                <option value="Root canal Treatment">Root canal Treatment</option>
+                <option value="Scaling & polishing">Scaling & polishing</option>
+                <option value="Simple extraction/tooth removal">Simple extraction/tooth removal</option>
+                <option value="Smile designing">Smile designing</option>
+                <option value="Specialized complete denture">Specialized complete denture</option>
+                <option value="Std.complete denture">Std.complete denture</option>
+                <option value="Surgical extraction/wisdom tooth removal">Surgical extraction/wisdom tooth removal
+                </option>
+                <option value="Teeth Whitening">Teeth Whitening</option>
+              </select>
             </div>
+          </div>
 
-            <div class="row form-group">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <label class="font-weight-bold" for="contact">Contact Number*</label>
-                <input type="text" id="contact" class="form-control" placeholder="Contact Number">
-              </div>
-              <div class="col-md-6">
-                <label class="font-weight-bold" for="email">Email</label>
-                <input type="email" id="email" class="form-control" placeholder="Email">
-              </div>
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="font-weight-bold" for="note">Notes</label>
+              <textarea name="note" id="note" cols="30" rows="5" class="form-control"
+                placeholder="Write your notes or questions here..."></textarea>
+              <div class="invalid-feedback">Please enter your message.</div>
             </div>
-
-            <div class="row form-group">
-              <div class="col-md-12">
-                <label class="font-weight-bold" for="treatment">Treatment Needed</label>
-                <select name="treatment" id="treatment" class="form-control">
-                  <option value="" disabled selected>Select a treatment</option>
-                  <option value="">Apicectomy</option>
-                  <option value="">Bone grafting</option>
-                  <option value="">Ceramic venner/laminates</option>
-                  <option value="">Cast partial denture</option>
-                  <option value="">Consultation</option>
-                  <option value="">Dental filling</option>
-                  <option value="">Dental implants</option>
-                  <option value="">Dental implants crown</option>
-                  <option value="">Direct sinus lift surgery</option>
-                  <option value="">E-max crown</option>
-                  <option value="">Gum depigmentation</option>
-                  <option value="">Gum recontouring/gum esthetic surgery</option>
-                  <option value="">IOPA X-Ray</option>
-                  <option value="">Inlay/onlay composite</option>
-                  <option value="">Inlay/onlay metallic</option>
-                  <option value="">Indirect sinus lift surgery</option>
-                  <option value="">Metal Ceramic Crown</option>
-                  <option value="">Metal Crown</option>
-                  <option value="">Operculectomy</option>
-                  <option value="">Orthodontic ceramic braces</option>
-                  <option value="">Orthodontic metallic braces</option>
-                  <option value="">Orthodontic self-ligating ceramic braces</option>
-                  <option value="">Orthodontic treatment (aligners)</option>
-                  <option value="">Orthodontic treatment (self-ligating metallic braces)</option>
-                  <option value="">Pediatric Root canal Treatment with metal cap</option>
-                  <option value="">Pediatric Root canal Treatment with zirconia cap</option>
-                  <option value="">Pediatric dental filling</option>
-                  <option value="">Pediatric extraction</option>
-                  <option value="">Pediatric fluoride application (each arch)</option>
-                  <option value="">Pediatric scaling & polishing</option>
-                  <option value="">Pediatric space maintainer</option>
-                  <option value="">Periodontal flap surgery</option>
-                  <option value="">Pit & fissure sealant</option>
-                  <option value="">Post & Core</option>
-                  <option value="">Post Root canal treatment Filling (Composite)</option>
-                  <option value="">Premium dental implant</option>
-                  <option value="">Removable acrylic partial denture</option>
-                  <option value="">RE-Root canal treatment</option>
-                  <option value="">Root canal Treatment</option>
-                  <option value="">Scaling & polishing</option>
-                  <option value="">Simple extraction/tooth removal</option>
-                  <option value="">Smile designing</option>
-                  <option value="">Specialized complete denture</option>
-                  <option value="">Std.complete denture</option>
-                  <option value="">Surgical extraction/wisdom tooth removal</option>
-                  <option value="">Teeth Whitening</option>
-                </select>
-              </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-md-12">
+              <input type="submit" name="submit" value="Submit" class="btn btn-primary">
             </div>
-
-            <div class="row form-group">
-              <div class="col-md-12">
-                <label class="font-weight-bold" for="note">Notes</label>
-                <textarea name="note" id="note" cols="30" rows="5" class="form-control"
-                  placeholder="Write your notes or questions here..."></textarea>
-              </div>
-            </div>
-            <div style="display: none;">
-              {{ appointment_form.honeypot }}
-            </div>
-
-            <div class="row form-group">
-              <div class="col-md-12">
-                <input type="submit" name="submit" value="Submit" class="btn btn-primary">
-              </div>
-            </div>
-          </form>
-          <script type="text/javascript">
-            $(document).ready(function () {
-              // Get references to the date and time slot select fields
-              var dateSelect = $('#id_date');
-              var timeSlotSelect = $('#id_time_slot');
-
-              // Add an event listener for date change
-              dateSelect.on('change', function () {
-                console.log("Date changed");
-                var selectedDate = dateSelect.val();
-
-                // Convert the selected date to the correct format (YYYY-MM-DD)
-                var parts = selectedDate.split("/");
-                var formattedDate = parts[2] + "-" + parts[0] + "-" + parts[1];
-                console.log("Formatted Date: " + formattedDate);
-
-                // Send an AJAX request with the formatted date
-                $.ajax({
-                  url: '/get_available_time_slots/',
-                  method: 'GET',
-                  data: { selected_date: formattedDate }, // Use the formatted date
-                  dataType: 'json',
-                  success: function (data) {
-                    // Log the received data to verify
-                    console.log("Received Data:", data);
-
-                    // Update the time slot select field options
-                    timeSlotSelect.empty();
-                    $.each(data.available_time_slots, function (index, timeSlot) {
-                      timeSlotSelect.append($('<option>', {
-                        value: timeSlot,
-                        text: timeSlot
-                      }));
-                    });
-                  },
-                  error: function (xhr, status, error) {
-                    console.error("Error: " + error);
-                  }
-                });
-              });
-            });              
-          </script>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('appointmentForm2');
+    // const responseMessage = document.getElementById('response-message');
+    function sendFormData(event) {
+      console.log("Submitting form...");
+      event.preventDefault(); // Prevent form default submission
+
+      const formData = new FormData(form);
+      alert("Submitting form...");
+
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+      })
+        .then(response => response.text())
+        .then(data => {
+          if (data.trim().toLowerCase() === "success") {
+            alert("Thank you for contacting us! Redirecting...");
+            setTimeout(() => window.location.href = "/", 2000);
+          } else {
+            alert("Oops! Something went wrong. Please try again.");
+            setTimeout(() => window.location.href = "/", 2000);
+          }
+        })
+        .catch(error => {
+          alert("Error: Unable to submit the form. Please try again.");
+          setTimeout(() => window.location.href = "/", 2000);
+        });
+    }
+
+    // form.addEventListener("submit", sendFormData);
+
+  });
+
+</script>
