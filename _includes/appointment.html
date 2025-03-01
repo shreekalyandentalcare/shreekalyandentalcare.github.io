@@ -11,40 +11,45 @@
         </div>
       </div>
       <div class="col-lg-6 order-2 order-lg-1" id="response-message">
-        <form method="post" class="p-5 bg-white"
-          action="https://script.google.com/macros/s/AKfycbzz4jq1sIIKfG2oXBISrfvdZaR-KlGcECTOInWaPaAWmja8JiMJawaN0DaDFtSxCuE/exec">
+        <form id="appointmentForm" class="p-5 bg-white">
           <div class="row form-group">
             <div class="col-md-6 mb-3 mb-md-0">
               <label class="font-weight-bold" for="fname">First Name*</label>
-              <input type="text" id="fname" name="First Name" class="form-control" placeholder="First Name" required>
-              <div class="invalid-feedback">Please enter your name.</div>
+              <input type="text" id="fname" name="firstName" class="form-control" placeholder="First Name" required>
+              <div class="invalid-feedback">Please enter your first name.</div>
             </div>
             <div class="col-md-6">
               <label class="font-weight-bold" for="lname">Last Name*</label>
-              <input type="text" id="lname" name="Last Name" class="form-control" placeholder="Last Name" required>
+              <input type="text" id="lname" name="lastName" class="form-control" placeholder="Last Name" required>
+              <div class="invalid-feedback">Please enter your last name.</div>
             </div>
           </div>
 
           <div class="row form-group">
             <div class="col-md-6 mb-3 mb-md-0">
               <label class="font-weight-bold" for="gender">Gender*</label>
-              <input type="text" id="gender" name="Gender" class="form-control" placeholder="Gender" required>
+              <select id="gender" name="gender" class="form-control" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
             <div class="col-md-6">
               <label class="font-weight-bold" for="age">Age*</label>
-              <input type="text" id="age" name="Age" class="form-control" placeholder="Age" required>
+              <input type="number" id="age" name="age" class="form-control" placeholder="Age" min="1" required>
+              <div class="invalid-feedback">Please enter a valid age.</div>
             </div>
           </div>
 
           <div class="row form-group">
             <div class="col-md-6 mb-3 mb-md-0">
               <label class="font-weight-bold" for="date">Date*</label>
-              <input type="text" id="date" name="Date" class="form-control datepicker px-2" placeholder="Date of visit"
-                required>
+              <input type="date" id="date" name="date" class="form-control" required>
             </div>
             <div class="col-md-6">
               <label class="font-weight-bold" for="time">Time Slot*</label>
-              <select id="time" name="Time Slot" class="form-control" required>
+              <select id="time" name="timeSlot" class="form-control" required>
                 <option value="" disabled selected>Select a time slot</option>
                 <option value="10:30 AM">10:30 AM</option>
                 <option value="11:15 AM">11:15 AM</option>
@@ -64,12 +69,13 @@
           <div class="row form-group">
             <div class="col-md-6 mb-3 mb-md-0">
               <label class="font-weight-bold" for="contact">Contact Number*</label>
-              <input type="text" id="contact" name="Contact" class="form-control" placeholder="Contact Number" required>
-              <div class="invalid-feedback">Please enter a valid phone number with at least 10 digits.</div>
+              <input type="tel" id="contact" name="contact" class="form-control" placeholder="Contact Number"
+                pattern="[0-9]{10}" required>
+              <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
             </div>
             <div class="col-md-6">
               <label class="font-weight-bold" for="email">Email</label>
-              <input type="email" id="email" name="Email" class="form-control" placeholder="Email">
+              <input type="email" id="email" name="email" class="form-control" placeholder="Email">
               <div class="invalid-feedback">Please enter a valid email address (e.g., name@example.com).</div>
             </div>
           </div>
@@ -77,61 +83,21 @@
           <div class="row form-group">
             <div class="col-md-12">
               <label class="font-weight-bold" for="treatment">Treatment Needed</label>
-              <select name="Treatment Needed" id="treatment" class="form-control">
+              <select name="treatmentNeeded" id="treatment" class="form-control">
                 <option value="" disabled selected>Select a treatment</option>
                 <option value="Apicectomy">Apicectomy</option>
                 <option value="Bone grafting">Bone grafting</option>
-                <option value="Ceramic venner/laminates">Ceramic venner/laminates</option>
+                <option value="Ceramic veneer/laminates">Ceramic veneer/laminates</option>
                 <option value="Cast partial denture">Cast partial denture</option>
                 <option value="Consultation">Consultation</option>
                 <option value="Dental filling">Dental filling</option>
                 <option value="Dental implants">Dental implants</option>
                 <option value="Dental implants crown">Dental implants crown</option>
-                <option value="Direct sinus lift surgery">Direct sinus lift surgery</option>
-                <option value="E-max crown">E-max crown</option>
-                <option value="Gum depigmentation">Gum depigmentation</option>
-                <option value="Gum recontouring/gum esthetic surgery">Gum recontouring/gum esthetic surgery</option>
-                <option value="IOPA X-Ray">IOPA X-Ray</option>
-                <option value="Inlay/onlay composite">Inlay/onlay composite</option>
-                <option value="Inlay/onlay metallic">Inlay/onlay metallic</option>
-                <option value="Indirect sinus lift surgery">Indirect sinus lift surgery</option>
-                <option value="Metal Ceramic Crown">Metal Ceramic Crown</option>
-                <option value="Metal Crown">Metal Crown</option>
-                <option value="Operculectomy">Operculectomy</option>
-                <option value="Orthodontic ceramic braces">Orthodontic ceramic braces</option>
-                <option value="Orthodontic metallic braces">Orthodontic metallic braces</option>
-                <option value="Orthodontic self-ligating ceramic braces">Orthodontic self-ligating ceramic braces
-                </option>
-                <option value="Orthodontic treatment (aligners)">Orthodontic treatment (aligners)</option>
-                <option value="Orthodontic treatment (self-ligating metallic braces)">Orthodontic treatment
-                  (self-ligating metallic braces)</option>
-                <option value="Pediatric Root canal Treatment with metal cap">Pediatric Root canal Treatment with metal
-                  cap</option>
-                <option value="Pediatric Root canal Treatment with zirconia cap">Pediatric Root canal Treatment with
-                  zirconia cap</option>
-                <option value="Pediatric dental filling">Pediatric dental filling</option>
-                <option value="Pediatric extraction">Pediatric extraction</option>
-                <option value="Pediatric fluoride application (each arch)">Pediatric fluoride application (each arch)
-                </option>
-                <option value="Pediatric scaling & polishing">Pediatric scaling & polishing</option>
-                <option value="Pediatric space maintainer">Pediatric space maintainer</option>
-                <option value="Periodontal flap surgery">Periodontal flap surgery</option>
-                <option value="Pit & fissure sealant">Pit & fissure sealant</option>
-                <option value="Post & Core">Post & Core</option>
-                <option value="Post Root canal treatment Filling (Composite)">Post Root canal treatment Filling
-                  (Composite)</option>
-                <option value="Premium dental implant">Premium dental implant</option>
-                <option value="Removable acrylic partial denture">Removable acrylic partial denture</option>
-                <option value="RE-Root canal treatment">RE-Root canal treatment</option>
-                <option value="Root canal Treatment">Root canal Treatment</option>
                 <option value="Scaling & polishing">Scaling & polishing</option>
-                <option value="Simple extraction/tooth removal">Simple extraction/tooth removal</option>
-                <option value="Smile designing">Smile designing</option>
-                <option value="Specialized complete denture">Specialized complete denture</option>
-                <option value="Std.complete denture">Std.complete denture</option>
+                <option value="Teeth Whitening">Teeth Whitening</option>
+                <option value="Root canal Treatment">Root canal Treatment</option>
                 <option value="Surgical extraction/wisdom tooth removal">Surgical extraction/wisdom tooth removal
                 </option>
-                <option value="Teeth Whitening">Teeth Whitening</option>
               </select>
             </div>
           </div>
@@ -139,54 +105,39 @@
           <div class="row form-group">
             <div class="col-md-12">
               <label class="font-weight-bold" for="note">Notes</label>
-              <textarea name="Notes" id="note" cols="30" rows="5" class="form-control"
+              <textarea name="notes" id="note" cols="30" rows="5" class="form-control"
                 placeholder="Write your notes or questions here..."></textarea>
-              <div class="invalid-feedback">Please enter your message.</div>
             </div>
           </div>
+
           <div class="row form-group">
             <div class="col-md-12">
-              <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+              <input type="submit" name="submit" value="Submit" class="btn btn-primary w-100">
             </div>
           </div>
         </form>
+
       </div>
     </div>
   </div>
 </div>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('appointmentForm2');
-    // const responseMessage = document.getElementById('response-message');
-    function sendFormData(event) {
-      console.log("Submitting form...");
-      event.preventDefault(); // Prevent form default submission
+  document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    var formData = new FormData(this);
 
-      const formData = new FormData(form);
-      alert("Submitting form...");
-
-      fetch(form.action, {
-        method: "POST",
-        body: formData,
+    fetch("https://script.google.com/macros/s/AKfycbwRVUCV_AWaiL8nL6-q5WdCr_R3wpKOcuzetOPGFB_mbss-4D1M_EXgrDdVLHKmyMjz/exec", {
+      method: "POST",
+      body: new URLSearchParams(formData)
+    })
+      .then(response => response.text())
+      .then(data => {
+        alert("Appointment submitted successfully!");
+        window.location.href = "/";  // Redirect to home page
       })
-        .then(response => response.text())
-        .then(data => {
-          if (data.trim().toLowerCase() === "success") {
-            alert("Thank you for contacting us! Redirecting...");
-            setTimeout(() => window.location.href = "/", 2000);
-          } else {
-            alert("Oops! Something went wrong. Please try again.");
-            setTimeout(() => window.location.href = "/", 2000);
-          }
-        })
-        .catch(error => {
-          alert("Error: Unable to submit the form. Please try again.");
-          setTimeout(() => window.location.href = "/", 2000);
-        });
-    }
-
-    // form.addEventListener("submit", sendFormData);
-
+      .catch(error => {
+        console.error("Error:", error);
+        alert("Something went wrong! Please try again.");
+      });
   });
-
 </script>
