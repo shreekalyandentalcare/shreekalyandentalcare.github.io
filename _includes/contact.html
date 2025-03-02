@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-12 col-lg-6 mb-5 mb-lg-0">
                 <h2 class="site-heading text-black mb-5"><strong>Appointment</strong></h2>
-                <form id="appointmentForm" class="p-5 bg-white">
+                <form id="appointmentForm" class="p-5 bg-white embossed-form">
                     <div class="row form-group">
                         <div class="col-md-6 mb-3 mb-md-0">
                             <label class="font-weight-bold" for="fname">First Name*</label>
@@ -206,38 +206,38 @@
         event.preventDefault();
         var formData = new FormData(this);
 
-        fetch("https://script.google.com/macros/s/AKfycby94aw9P-Yg7L50mlJw4uj2wK0XpH_EG32NTflsNEWq2bwG__tro-m6XrDThbRWc8LF/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbz63s83MoGdX8I6luPKG7M_xWwMqsImbXOrqoR276-vUJTpbpcA5HqGcItIYu8z1AAx/exec", {
             method: "POST",
             body: new URLSearchParams(formData)
         })
             .then(response => response.text())
             .then(data => {
                 alert("Appointment submitted successfully!");
-                window.location.href = "/";  // Redirect to home page
+                window.location.href = "/contact";  // Redirect to home page
             })
             .catch(error => {
                 console.error("Error:", error);
                 alert("Something went wrong! Please try again.");
-                window.location.href = "/";  // Redirect to home page
+                window.location.href = "/contact";  // Redirect to home page
             });
     });
     document.getElementById("contactForm").addEventListener("submit", function (event) {
         event.preventDefault();
         var formData = new FormData(this);
 
-        fetch("https://script.google.com/macros/s/AKfycbzdVKRcBr7itajsUqgTO75cpr48gaJpY9c3Va-B32oEUhZAk5yz-EzF30kTlDvSb4-MXg/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbx1hoCPrXnTBQTTu3scJWyE7qoHdS6VCLMOAQb3KvEdqMmdj_Ce9zJH0gKb1y9KySDC5g/exec", {
             method: "POST",
             body: new URLSearchParams(formData)
         })
             .then(response => response.text())
             .then(data => {
                 alert("Details submitted successfully!");
-                window.location.href = "/";  // Redirect to home page
+                window.location.href = "/contact";  // Redirect to home page
             })
             .catch(error => {
                 console.error("Error:", error);
                 alert("Something went wrong! Please try again.");
-                window.location.href = "/";  // Redirect to home page
+                window.location.href = "/contact";  // Redirect to home page
             });
     });   
 </script>
