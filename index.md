@@ -5,7 +5,7 @@
 layout: default
 ---
 
-{% include index.html %}
+{% include home.html %}
 {% include appointment.html %}
 {% include our-services.html %}
 {% include location.html %}
