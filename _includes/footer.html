@@ -8,12 +8,18 @@
                     </div>
                     <div class="col-md-6 col-lg-6">
                         <ul style="padding: 0;color: #DCDCDC; list-style: none;">
-                            <li><a href="/" style="color: #DCDCDC;">Home</a></li>
+                            <!-- <li><a href="/" style="color: #DCDCDC;">Home</a></li>
                             <li><a href="/services/" style="color: #DCDCDC;">Services</a></li>
                             <li><a href="https://www.google.com/maps/place/Shree+Kalyan+Dental+Care/@21.225269,81.6557681,17z/data=!3m1!4b1!4m6!3m5!1s0x3a28dd1ccb5aa133:0xe67136b0370e4114!8m2!3d21.225269!4d81.658343!16s%2Fg%2F11tfs_ksgj?entry=ttu"
                                     style="color: #DCDCDC;">Google Maps Link</a></li>
                             <li><a href="/about-us/" style="color: #DCDCDC;">About Us</a></li>
-                            <li><a href="/contact/" style="color: #DCDCDC;">Contact Us</a></li>
+                            <li><a href="/contact/" style="color: #DCDCDC;">Contact Us</a></li> -->
+                            <li><a href="{{ '/' | relative_url }}" style="color: #DCDCDC;">Home</a></li>
+                            <li><a href="{{ '/services/' | relative_url }}" style="color: #DCDCDC;">Services</a></li>
+                            <li><a href="https://www.google.com/maps/place/Shree+Kalyan+Dental+Care/@21.225269,81.6557681,17z/data=!3m1!4b1!4m6!3m5!1s0x3a28dd1ccb5aa133:0xe67136b0370e4114!8m2!3d21.225269!4d81.658343!16s%2Fg%2F11tfs_ksgj?entry=ttu"
+                                    style="color: #DCDCDC;">Google Maps Link</a></li>
+                            <li><a href="{{ '/about-us/' | relative_url }}" style="color: #DCDCDC;">About Us</a></li>
+                            <li><a href="{{ '/contact/' | relative_url }}" style="color: #DCDCDC;">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
